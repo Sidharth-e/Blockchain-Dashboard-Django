@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="refresh" content="20">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trade Status</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    <script type="text/javascript" src="{% static 'script.js' %}"></script>
+</head>
+<body>
+    <nav>
+        <ul>
+             <li><a href="{% url 'trade'%}">Trade</a></li>
+             <li><a href="{%  url 'Crypto'%}">Crypto</a></li>
+             <li class="logout"><a href="#">CryptoDashBoard</a></li>
+           </ul>
+       </nav>
+       <input type="search" class="light-table-filter" data-table="order-table" placeholder="Filter">
+<br>
+    <table class="order-table table">
+        <thead>
+
+        
+        <tr>
+            <td>Crypto</td>
+            <td>Price</td>
+        </tr>
+    </thead>
+    <tbody>
+        {% for k in data%}
+        <tr>
+            <td>{{k.symbol}}</td>
+            <td>{{k.price}}</td>
+        </tr>
+    {% endfor %}
+</tbody>
+</table>
+</body>
+</html>

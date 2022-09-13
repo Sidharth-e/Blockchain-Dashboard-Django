@@ -1,0 +1,38 @@
+ul{
+    display:flex;
+  }
+  .logout{
+    margin-left:auto;
+  }
+  li{
+    padding:1rem;
+  }
+  
+  /* only for visual purpose*/
+  nav{
+    background:#8f3b76;
+  }
+  ul{
+     list-style:none;
+  }
+  li:hover{
+    background:#cb80b5;
+    transition: all ease 0.3s;
+    cursor:pointer;
+  }
+  a{
+     text-decoration:none;
+    color:#fff;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  tr:hover {background-color:#8f3b76;}
